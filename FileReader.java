@@ -15,7 +15,10 @@ public class FileReader {
 
         while (sc.hasNext()) {
             String nextWord = sc.next();
-            wordsList.add(nextWord.replaceAll(",", ""));
+            nextWord = nextWord.replaceAll("\\.", "");
+            nextWord = nextWord.replaceAll("\\;", "");
+            nextWord = nextWord.replaceAll("\\?", "");
+            wordsList.add(nextWord);
             // System.out.println(sc.next());
         }
         sc.close();
